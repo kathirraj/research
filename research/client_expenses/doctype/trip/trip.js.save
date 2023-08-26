@@ -1,0 +1,34 @@
+// Copyright (c) 2022, B & K Securities and contributors
+// For license information, please see license.txt
+
+frappe.ui.form.on('Expense Entry', {
+	
+	split: function(frm, cdt, cdn) {
+		frappe.msgprint("islocal: " + frappe.get_doc(cdt,cdn).idx);
+		if(frm.doc.__islocal){
+			frappe.msgprint("Save the Trip before splitting the expenses between clients");
+			
+		}else{
+        	let row= frappe.get_doc(cdt,cdn);
+		frappe.db.get_list('Expense Split', {filters:{'expense_entry_id': cdn}}).then(records => {frappe.msgprint("Already rows available " +  records.length);});
+		if(row.bill_amount > 0  ) {
+			frappe.msgprint("Hi" + row.expense_type + "|" + row.bill_amount);
+			let splitrow = frm.add_child('clientwise_expense_split', {
+    				expense_entry_id: cdn,
+				expense_type: row.expense_type,
+    				split_amount: row.bill_amount
+			});
+
+			frm.refresh_field('clientwise_expense_split');
+		}else{
+			frappe.msgprint("Enter the bill amount first");
+		}
+		}
+        //if ( typeof row.research_analyst === "undefined") {
+        //    frappe.model.set_value(row.doctype, row.name, "research_analyst_name", "");
+            //=======Alternate method=========
+            //row.research_analyst_name = "";
+            //cur_frm.refresh_field("research_team");
+        //} 
+    	}
+});

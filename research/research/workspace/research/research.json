@@ -1,0 +1,110 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"upbnXJLxNC\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Research</span>\",\"col\":12}},{\"id\":\"EO9Xl7CM0T\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Client\",\"col\":3}},{\"id\":\"yjshr2faEA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Corporate\",\"col\":3}},{\"id\":\"JiiP2Uz-ze\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"rm9kAiXMAd\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sector\",\"col\":3}},{\"id\":\"2WKqKBi6Lc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Client Tier\",\"col\":3}},{\"id\":\"8ip_SolJQz\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Client Category\",\"col\":3}},{\"id\":\"c0CbbOxrwP\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Client Family\",\"col\":3}},{\"id\":\"LRHcxt9Fo_\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Client Schemes\",\"col\":3}},{\"id\":\"79RC5NSSyu\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"fgmLmyuSGu\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Client Vote\",\"col\":3}},{\"id\":\"JZoirYkbLb\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Upload Model to Bloomberg\",\"col\":4}},{\"id\":\"WR_yP6Fzn2\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"n4AIDweL7L\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Research Report\",\"col\":3}}]",
+ "creation": "2022-11-13 23:31:13.653946",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "chart",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Research",
+ "links": [],
+ "modified": "2023-08-24 11:55:46.434380",
+ "modified_by": "Administrator",
+ "module": "Research",
+ "name": "Research",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 2.0,
+ "shortcuts": [
+  {
+   "color": "Orange",
+   "doc_view": "New",
+   "label": "Upload Model to Bloomberg",
+   "link_to": "Bloomberg Upload",
+   "stats_filter": "{\"upload_status\":[\"=\",\"Ready for Upload\"]}",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "format": "{}",
+   "label": "Sector",
+   "link_to": "Sector",
+   "stats_filter": "{\"disabled\":[\"=\",0]}",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Research Report",
+   "link_to": "Research Report",
+   "stats_filter": "{\"actual_release_date\":[\"is\",\"not set\"]}",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "format": "{}",
+   "label": "Client",
+   "link_to": "Customer",
+   "stats_filter": "{\"disabled\":[\"=\",0]}",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "format": "{}",
+   "label": "Corporate",
+   "link_to": "Corporate",
+   "stats_filter": "{\"disabled\":[\"=\",0]}",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Client Tier",
+   "link_to": "Client Tier",
+   "stats_filter": "{\"disabled\":[\"=\",0]}",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Client Vote",
+   "link_to": "Client Vote",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Client Category",
+   "link_to": "Client Category",
+   "stats_filter": "{\"disabled\":[\"=\",0]}",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Client Schemes",
+   "link_to": "Client Schemes",
+   "stats_filter": "{\"disabled\":[\"=\",0]}",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Client Family",
+   "link_to": "Client Family",
+   "type": "DocType"
+  }
+ ],
+ "title": "Research"
+}

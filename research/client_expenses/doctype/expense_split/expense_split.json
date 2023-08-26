@@ -1,0 +1,74 @@
+{
+ "actions": [],
+ "allow_events_in_timeline": 1,
+ "autoname": "autoincrement",
+ "creation": "2022-12-20 15:46:50.990753",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "client",
+  "split_",
+  "split_amount",
+  "expense_type",
+  "expense_entry_id",
+  "bill_reference"
+ ],
+ "fields": [
+  {
+   "fieldname": "client",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Client",
+   "read_only": 1
+  },
+  {
+   "fieldname": "split_",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Split %",
+   "read_only": 1
+  },
+  {
+   "fieldname": "split_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Split Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "expense_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Expense Type",
+   "options": "\nTravel\nFood\nGift\nStay",
+   "read_only": 1
+  },
+  {
+   "fieldname": "expense_entry_id",
+   "fieldtype": "Data",
+   "label": "Expense Entry ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "bill_reference",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Bill Reference",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-01-09 17:41:07.867571",
+ "modified_by": "Administrator",
+ "module": "Client Expenses",
+ "name": "Expense Split",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

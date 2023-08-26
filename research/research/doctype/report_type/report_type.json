@@ -1,0 +1,98 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:report_type_name",
+ "creation": "2020-07-24 15:38:14.279931",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "report_type_name",
+  "release_frequency",
+  "description",
+  "sectorwise",
+  "corporatewise"
+ ],
+ "fields": [
+  {
+   "fieldname": "report_type_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Report Type Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "release_frequency",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Release Frequency",
+   "options": "\nDaily\nWeekly\nMonthly\nQuarterly\nBiannually\nYearly\nNone"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:!doc.corporatewise",
+   "fieldname": "sectorwise",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Sectorwise"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:!doc.sectorwise",
+   "fieldname": "corporatewise",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Corporatewise"
+  }
+ ],
+ "links": [],
+ "modified": "2023-08-17 13:05:51.217771",
+ "modified_by": "Administrator",
+ "module": "Research",
+ "name": "Report Type",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "export": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Research User"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Research Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,313 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:ENT-{YY}-{###}",
+ "creation": "2023-03-16 12:51:04.922079",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "request_for",
+  "entity",
+  "is_new_client",
+  "new_client_name",
+  "client_country",
+  "column_break_3lym1",
+  "requester",
+  "request_date",
+  "validity",
+  "section_break_qzgje",
+  "client_users",
+  "entitlements_section",
+  "is_research_portal",
+  "column_break_e41fr",
+  "is_research_portal_done",
+  "research_portal_by",
+  "section_break_vqedi",
+  "is_email_list",
+  "column_break_lt5eh",
+  "is_email_list_done",
+  "email_list_by",
+  "section_break_gonvz",
+  "is_bloomberg",
+  "column_break_lpa0q",
+  "is_bloomberg_done",
+  "bloomberg_by",
+  "section_break_ysvwh",
+  "is_thomson",
+  "column_break_5vqi3",
+  "is_thomson_done",
+  "thomson_by",
+  "section_break_xwbdz",
+  "is_factset",
+  "column_break_pfm0h",
+  "is_factset_done",
+  "factset_by",
+  "section_break_y8o5y",
+  "approver",
+  "remarks",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "user",
+   "fieldname": "requester",
+   "fieldtype": "Link",
+   "label": "Requester",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "request_date",
+   "fieldtype": "Date",
+   "label": "Request Date",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_new_client",
+   "fieldtype": "Check",
+   "label": "New Client"
+  },
+  {
+   "depends_on": "eval:doc.is_new_client",
+   "fieldname": "new_client_name",
+   "fieldtype": "Data",
+   "label": "New Client Name",
+   "mandatory_depends_on": "eval:doc.is_new_client"
+  },
+  {
+   "depends_on": "eval:doc.is_new_client",
+   "fieldname": "client_country",
+   "fieldtype": "Data",
+   "label": "Client Country"
+  },
+  {
+   "fieldname": "entitlements_section",
+   "fieldtype": "Section Break",
+   "label": "Entitlements"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_research_portal",
+   "fieldtype": "Check",
+   "label": "Enable Research Portal Access"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_email_list",
+   "fieldtype": "Check",
+   "label": "Add to Email Distribution List"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_bloomberg",
+   "fieldtype": "Check",
+   "label": "Enable Bloomberg Access"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_thomson",
+   "fieldtype": "Check",
+   "label": "Enable Thomson Reuters Access"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_factset",
+   "fieldtype": "Check",
+   "label": "Enable FactSet Access"
+  },
+  {
+   "fieldname": "section_break_y8o5y",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "column_break_3lym1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_qzgje",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Leave Empty for no time limit",
+   "fieldname": "validity",
+   "fieldtype": "Date",
+   "label": "Valid Till"
+  },
+  {
+   "default": "naveen.prabhu@bksec.com",
+   "fieldname": "approver",
+   "fieldtype": "Link",
+   "label": "Approver",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Entitlement Request",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "client_users",
+   "fieldtype": "Table",
+   "label": "Client Users",
+   "options": "Entitlement Client User"
+  },
+  {
+   "fieldname": "request_for",
+   "fieldtype": "Select",
+   "label": "Request For",
+   "options": "Customer\nCorporate"
+  },
+  {
+   "depends_on": "eval: !doc.is_new_client",
+   "fieldname": "entity",
+   "fieldtype": "Dynamic Link",
+   "label": "Entity Name",
+   "options": "request_for"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval: doc.is_research_portal",
+   "fieldname": "is_research_portal_done",
+   "fieldtype": "Check",
+   "label": "Done"
+  },
+  {
+   "depends_on": "eval: doc.is_research_portal && doc.is_research_portal_done",
+   "fieldname": "research_portal_by",
+   "fieldtype": "Link",
+   "label": "By",
+   "options": "User"
+  },
+  {
+   "fieldname": "section_break_vqedi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval: doc.is_email_list",
+   "fieldname": "is_email_list_done",
+   "fieldtype": "Check",
+   "label": "Done"
+  },
+  {
+   "fieldname": "section_break_gonvz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval: doc.is_bloomberg",
+   "fieldname": "is_bloomberg_done",
+   "fieldtype": "Check",
+   "label": "Done"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval: doc.is_thomson",
+   "fieldname": "is_thomson_done",
+   "fieldtype": "Check",
+   "label": "Done"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval: doc.is_factset",
+   "fieldname": "is_factset_done",
+   "fieldtype": "Check",
+   "label": "Done"
+  },
+  {
+   "depends_on": "eval: doc.is_factset && doc.is_factset_done",
+   "fieldname": "factset_by",
+   "fieldtype": "Link",
+   "label": "By",
+   "options": "User"
+  },
+  {
+   "fieldname": "section_break_ysvwh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_xwbdz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval: doc.is_email_list && doc.is_email_list_done",
+   "fieldname": "email_list_by",
+   "fieldtype": "Link",
+   "label": "By",
+   "options": "User"
+  },
+  {
+   "depends_on": "eval: doc.is_bloomberg && doc.is_bloomberg_done",
+   "fieldname": "bloomberg_by",
+   "fieldtype": "Link",
+   "label": "By",
+   "options": "User"
+  },
+  {
+   "depends_on": "eval: doc.is_thomson && doc.is_thomson_done",
+   "fieldname": "thomson_by",
+   "fieldtype": "Link",
+   "label": "By",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_e41fr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_lt5eh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_lpa0q",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_5vqi3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_pfm0h",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-03-29 17:19:03.291330",
+ "modified_by": "Administrator",
+ "module": "Research",
+ "name": "Entitlement Request",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

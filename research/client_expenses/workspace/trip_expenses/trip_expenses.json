@@ -1,0 +1,50 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"2GPalArlOY\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Trip Expenses</span>\",\"col\":12}},{\"id\":\"ioY32QTS_4\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"sjDlkqcDen\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"All Trips\",\"col\":3}},{\"id\":\"nYZX2RCeVb\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"uwqxxmBIdX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Trips for Approval\",\"col\":3}},{\"id\":\"9aAgGVVIbw\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"M0_cBnzef2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Trip\",\"col\":3}}]",
+ "creation": "2023-01-03 22:56:13.391333",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "money-coins-1",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Trip Expenses",
+ "links": [],
+ "modified": "2023-03-27 15:31:15.914409",
+ "modified_by": "Administrator",
+ "module": "Client Expenses",
+ "name": "Trip Expenses",
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 3.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "format": "{}",
+   "label": "Trips for Approval",
+   "link_to": "Trip",
+   "stats_filter": "{\"approval_status\":[\"=\",\"Submitted for Approval\"]}",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "All Trips",
+   "link_to": "Trip",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "New",
+   "label": "New Trip",
+   "link_to": "Trip",
+   "type": "DocType"
+  }
+ ],
+ "title": "Trip Expenses"
+}

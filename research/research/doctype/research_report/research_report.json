@@ -1,0 +1,220 @@
+{
+ "actions": [],
+ "allow_auto_repeat": 1,
+ "allow_import": 1,
+ "autoname": "hash",
+ "creation": "2020-08-04 12:15:01.971487",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "report_type",
+  "period",
+  "report_date",
+  "column_break_5",
+  "sector",
+  "corporate",
+  "fund",
+  "section_break_9",
+  "report_summary",
+  "section_break_cg48t",
+  "report_by",
+  "scheduled_by",
+  "column_break_12",
+  "expected_release_date",
+  "actual_release_date",
+  "section_break_rpwer",
+  "file_reference_id",
+  "file_path",
+  "column_break_kixrf",
+  "file_name",
+  "section_break_13",
+  "comments",
+  "report_title"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "report_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Report Type",
+   "options": "Report Type"
+  },
+  {
+   "columns": 2,
+   "fieldname": "sector",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Sector",
+   "options": "Sector"
+  },
+  {
+   "columns": 2,
+   "fieldname": "corporate",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Corporate",
+   "options": "Corporate"
+  },
+  {
+   "fieldname": "fund",
+   "fieldtype": "Link",
+   "label": "Fund",
+   "options": "Fund"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "period",
+   "fieldtype": "Select",
+   "label": "Period",
+   "options": "\n2020-21\n2021-22\nJan-Mar\nApr-Jun\nJul-Sep\nOct-Dec"
+  },
+  {
+   "fieldname": "expected_release_date",
+   "fieldtype": "Date",
+   "label": "Expected Release Date"
+  },
+  {
+   "fieldname": "actual_release_date",
+   "fieldtype": "Date",
+   "label": "Actual Release Date"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "report_by",
+   "fieldtype": "Link",
+   "label": "Report By",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "scheduled_by",
+   "fieldtype": "Link",
+   "label": "Scheduled By",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "comments",
+   "fieldtype": "Small Text",
+   "label": "Comments"
+  },
+  {
+   "fieldname": "section_break_13",
+   "fieldtype": "Section Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "report_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Report Date"
+  },
+  {
+   "fieldname": "section_break_rpwer",
+   "fieldtype": "Section Break",
+   "label": "Report File Details"
+  },
+  {
+   "fieldname": "file_reference_id",
+   "fieldtype": "Data",
+   "label": "File Reference ID"
+  },
+  {
+   "fieldname": "file_path",
+   "fieldtype": "Data",
+   "label": "File Path"
+  },
+  {
+   "fieldname": "column_break_kixrf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "file_name",
+   "fieldtype": "Data",
+   "label": "File Name"
+  },
+  {
+   "fieldname": "report_summary",
+   "fieldtype": "Small Text",
+   "label": "Report Summary",
+   "max_height": "80px"
+  },
+  {
+   "fieldname": "section_break_cg48t",
+   "fieldtype": "Section Break"
+  },
+  {
+   "columns": 3,
+   "default": "{report_type}-{sector}-{corporate}-{report_date}",
+   "fieldname": "report_title",
+   "fieldtype": "Read Only",
+   "hidden": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Report Title"
+  }
+ ],
+ "links": [],
+ "modified": "2023-08-24 14:16:41.636143",
+ "modified_by": "Administrator",
+ "module": "Research",
+ "name": "Research Report",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Research Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Research User",
+   "share": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "report_type,sector,corporate",
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "report_title",
+ "track_changes": 1
+}

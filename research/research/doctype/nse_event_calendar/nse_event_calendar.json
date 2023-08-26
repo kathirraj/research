@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "creation": "2022-03-09 14:58:38.985545",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sequence_id",
+  "corporate",
+  "purpose",
+  "board_meeting_date",
+  "display_date",
+  "details",
+  "nse_code"
+ ],
+ "fields": [
+  {
+   "fieldname": "sequence_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Sequence ID",
+   "unique": 1
+  },
+  {
+   "fieldname": "corporate",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Corporate",
+   "options": "Corporate"
+  },
+  {
+   "fieldname": "purpose",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Purpose"
+  },
+  {
+   "fieldname": "board_meeting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Board Meeting Date"
+  },
+  {
+   "fieldname": "display_date",
+   "fieldtype": "Date",
+   "label": "Display Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "details",
+   "fieldtype": "Data",
+   "label": "Details"
+  },
+  {
+   "fieldname": "nse_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "NSE Code",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-03-09 15:03:11.979820",
+ "modified_by": "Administrator",
+ "module": "Research",
+ "name": "NSE Event Calendar",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

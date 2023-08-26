@@ -1,0 +1,187 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:TRIP-{YY}-{####}",
+ "creation": "2022-12-20 15:03:23.639944",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "trip_name",
+  "from",
+  "trip_by",
+  "current_user",
+  "column_break_4",
+  "approval_status",
+  "to",
+  "description",
+  "section_break_9",
+  "total_trip_bills",
+  "column_break_11",
+  "amt_not_allocated_to_clients",
+  "section_break_8",
+  "clients",
+  "section_break_4",
+  "expense_bills",
+  "clientwise_expense_split",
+  "test_js"
+ ],
+ "fields": [
+  {
+   "fieldname": "trip_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Trip Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description",
+   "max_height": "8em"
+  },
+  {
+   "fieldname": "from",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "From",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "To",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Expense Bills",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "expense_bills",
+   "fieldtype": "Table",
+   "label": "Expense Bills",
+   "options": "Expense Entry",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "clientwise_expense_split",
+   "fieldtype": "Table",
+   "label": "Clientwise Expense Split",
+   "options": "Expense Split",
+   "read_only": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "approval_status",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "label": "Approval Status",
+   "options": "Workflow State"
+  },
+  {
+   "fieldname": "clients",
+   "fieldtype": "Table",
+   "label": "Clients",
+   "options": "Trip Client"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Clients"
+  },
+  {
+   "fieldname": "trip_by",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "label": "Trip By",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "default": "user",
+   "fieldname": "current_user",
+   "fieldtype": "Link",
+   "label": "Created By",
+   "options": "User",
+   "read_only": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "test_js",
+   "fieldtype": "Button",
+   "label": "Test JS"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_trip_bills",
+   "fieldtype": "Read Only",
+   "label": "Total Trip Bills"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amt_not_allocated_to_clients",
+   "fieldtype": "Read Only",
+   "label": "Amount not Allocated to Clients"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-01-13 14:11:31.827458",
+ "modified_by": "Administrator",
+ "module": "Client Expenses",
+ "name": "Trip",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Gray",
+   "title": "Draft"
+  },
+  {
+   "color": "Blue",
+   "title": "Submitted for Approval"
+  },
+  {
+   "color": "Green",
+   "title": "Approved"
+  },
+  {
+   "color": "Red",
+   "title": "Rejected"
+  }
+ ]
+}

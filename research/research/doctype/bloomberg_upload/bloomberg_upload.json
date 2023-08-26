@@ -1,0 +1,102 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{bb_code}-{DD}-{MM}-{YY}_{##}",
+ "creation": "2023-06-26 11:25:45.355379",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "model_company",
+  "column_break_yqgaj",
+  "sector",
+  "bb_code",
+  "section_break_pxzgw",
+  "upload_status",
+  "column_break_dgc6u",
+  "upload_request_time",
+  "uploaded_time"
+ ],
+ "fields": [
+  {
+   "fetch_from": "model_company.bb_code",
+   "fieldname": "bb_code",
+   "fieldtype": "Data",
+   "label": "BB Code",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "model_company.sector",
+   "fieldname": "sector",
+   "fieldtype": "Data",
+   "label": "Sector",
+   "read_only": 1
+  },
+  {
+   "fieldname": "upload_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Upload Status",
+   "options": "\nReady for Upload\nUploaded",
+   "reqd": 1
+  },
+  {
+   "fieldname": "model_company",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Company",
+   "options": "Corporate",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_yqgaj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_pxzgw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "upload_request_time",
+   "fieldtype": "Datetime",
+   "label": "Upload Request Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_dgc6u",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "uploaded_time",
+   "fieldtype": "Datetime",
+   "label": "Uploaded Time",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-08-24 12:28:43.967399",
+ "modified_by": "Administrator",
+ "module": "Research",
+ "name": "Bloomberg Upload",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
